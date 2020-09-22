@@ -92,7 +92,7 @@ public class HigherOrLower : MonoBehaviour {
 
     void RowSelector () {
       Selector = UnityEngine.Random.Range(0,8);
-      Debug.LogFormat("[The Bioscanner #{0}] The chosen color now is {1}.", moduleId, ColorName[Selector]);
+      Debug.LogFormat("[Higher Or Lower #{0}] The chosen color now is {1}.", moduleId, ColorName[Selector]);
       NumbahFuckah.color = ColorsForText[Selector];
     }
 
@@ -105,11 +105,11 @@ public class HigherOrLower : MonoBehaviour {
         IsHigher = true;
       else
         IsHigher = false;
-      Debug.LogFormat("[The Bioscanner #{0}] The current number is {1} at step {2}.", moduleId, NumberShown, Iteration + 1);
+      Debug.LogFormat("[Higher Or Lower #{0}] The current number is {1} at step {2}.", moduleId, NumberShown, Iteration + 1);
       if (IsHigher)
-        Debug.LogFormat("[The Bioscanner #{0}] This is higher.", moduleId);
+        Debug.LogFormat("[Higher Or Lower #{0}] This is higher.", moduleId);
       else
-        Debug.LogFormat("[The Bioscanner #{0}] This is lower.", moduleId);
+        Debug.LogFormat("[Higher Or Lower #{0}] This is lower.", moduleId);
       NumbahFuckah.text = NumberShown.ToString("00");
     }
 
