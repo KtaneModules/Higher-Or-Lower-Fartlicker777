@@ -68,6 +68,7 @@ public class HigherOrLower : MonoBehaviour {
       else {
         GetComponent<KMBombModule>().HandleStrike();
         Iteration = 0;
+        NumberSelector();
       }
     }
 
