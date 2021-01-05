@@ -48,7 +48,6 @@ public class HigherOrLower : MonoBehaviour {
     }
 
     void Start () {
-      RowSelector();
       NumberSelector();
     }
 
@@ -65,11 +64,8 @@ public class HigherOrLower : MonoBehaviour {
         else
           NumberSelector();
       }
-      else {
-        GetComponent<KMBombModule>().HandleStrike();
-        Iteration = 0;
-        NumberSelector();
-      }
+      else
+        StrikeActions();
     }
 
     void LowerPress () {
@@ -85,10 +81,14 @@ public class HigherOrLower : MonoBehaviour {
         else
           NumberSelector();
       }
-      else {
-        GetComponent<KMBombModule>().HandleStrike();
-        Iteration = 0;
-      }
+      else
+        StrikeActions();
+    }
+
+    void StrikeActions () {
+      GetComponent<KMBombModule>().HandleStrike();
+      Iteration = 0;
+      NumberSelector();
     }
 
     void RowSelector () {
@@ -99,9 +99,9 @@ public class HigherOrLower : MonoBehaviour {
 
     void NumberSelector () {
       RowSelector();
-      NumberShown = UnityEngine.Random.Range(1,100);
+      NumberShown = UnityEngine.Random.Range(1, 100);
       while (NumberShown == RGBSequences[Selector][Iteration])
-        NumberShown = UnityEngine.Random.Range(1,100);
+        NumberShown = UnityEngine.Random.Range(1, 100);
       if (NumberShown > RGBSequences[Selector][Iteration])
         IsHigher = true;
       else
