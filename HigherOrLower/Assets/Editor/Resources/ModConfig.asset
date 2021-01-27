@@ -14,9 +14,10 @@ MonoBehaviour:
   id: HigherOrLower
   title: HigherOrLower
   author: me
-  description: "There will be a lot of ups and downs with this module.\r\n\r\nManual
-    can be found at ktane.timwi.de\r\n\r\nIf there are any bugs, contact Fartlicker777#9169
-    on Discord\r"
+  description: "There will be a lot of ups and downs with this module.\r\n\nDetermine
+    if the number displayed on the module is either higher or lower than the one in
+    the manual.\n\r\nManual can be found at ktane.timwi.de\r\n\r\nIf there are any
+    bugs, contact Fartlicker777#9169 on Discord\r"
   version: 
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 9ece4f4e12e02c542a2abe0249f902fc, type: 3}
