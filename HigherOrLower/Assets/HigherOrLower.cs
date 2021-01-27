@@ -53,6 +53,7 @@ public class HigherOrLower : MonoBehaviour {
 
     void HigherPress () {
       Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, Higher.transform);
+      Audio.PlaySoundAtTransform("High", this.transform);
       if (moduleSolved)
         return;
       if (IsHigher) {
@@ -70,6 +71,7 @@ public class HigherOrLower : MonoBehaviour {
 
     void LowerPress () {
       Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, Lower.transform);
+      Audio.PlaySoundAtTransform("Low", this.transform);
       if (moduleSolved)
         return;
       if (!IsHigher) {
